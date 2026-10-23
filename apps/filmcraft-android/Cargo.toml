@@ -1,0 +1,41 @@
+[package]
+name = "filmcraft-android"
+description = "FilmCraft on Android (NativeActivity + eframe/wgpu). EXPERIMENTAL, first-pass scaffold"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# Empty on every other target, like filmcraft-web, so `cargo test --workspace` is unaffected.
+# Build with cargo-apk / cargo-ndk, see docs/android.md.
+[target.'cfg(target_os = "android")'.dependencies]
+filmcraft-engine = { workspace = true }
+filmcraft-ui-egui = { workspace = true }
+egui = { workspace = true }
+eframe = { workspace = true, features = ["default_fonts", "wgpu", "android-native-activity"] }
+log = { workspace = true }
+android_logger = "0.15"
+serde_json = { workspace = true }
+
+# The crate needs one `#[unsafe(no_mangle)]` entry point; the lint is denied everywhere else.
+[lints.rust]
+unsafe_code = "deny"
+
+[package.metadata.android]
+package = "ai.storyteller.filmcraft"
+build_targets = ["aarch64-linux-android"]
+apk_name = "FilmCraft"
+
+[package.metadata.android.sdk]
+min_sdk_version = 29
+target_sdk_version = 34
+
+[package.metadata.android.application]
+label = "FilmCraft"
+
+[package.metadata.android.application.activity]
+config_changes = "orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout|uiMode"
+launch_mode = "singleTop"
