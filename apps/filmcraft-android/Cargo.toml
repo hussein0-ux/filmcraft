@@ -17,7 +17,7 @@ filmcraft-ui-egui = { workspace = true }
 egui = { workspace = true }
 eframe = { workspace = true, features = ["default_fonts", "wgpu", "android-native-activity"] }
 log = { workspace = true }
-android_logger = "0.15"
+android_logger = {workspace = true}
 serde_json = { workspace = true }
 
 # The crate needs one `#[unsafe(no_mangle)]` entry point; the lint is denied everywhere else.
