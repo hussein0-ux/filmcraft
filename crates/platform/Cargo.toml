@@ -33,15 +33,15 @@ filmcraft-time = { workspace = true }
 log = { workspace = true }
 
 [target.'cfg(target_os = "macos")'.dependencies]
-objc2-core-foundation = "0.3.2"
-objc2-core-media = "0.3.2"
-objc2-core-video = "0.3.2"
-objc2-video-toolbox = "0.3.2"
+objc2-core-foundation = {workspace = true}
+objc2-core-media = {workspace = true}
+objc2-core-video = {workspace = true}
+objc2-video-toolbox = {workspace = true}
 
 # Windows: Media Foundation decoder MFTs + Direct3D 11 / DXVA through the official `windows` bindings
 # (MIT OR Apache-2.0; already in the lockfile through wgpu / winit).
 [target.'cfg(target_os = "windows")'.dependencies]
-windows = { version = "0.62", features = [
+windows = {workspace = true, features = [
     "Win32_Foundation",
     "Win32_Graphics_Direct3D",
     "Win32_Graphics_Direct3D11",
@@ -51,12 +51,12 @@ windows = { version = "0.62", features = [
     "Win32_System_Com",
     "Win32_System_LibraryLoader",
     "Win32_UI_WindowsAndMessaging",
-] }
+]}
 
 # Linux: libva (VA-API) is loaded at run time with libloading (ISC; already in the lockfile through
 # wgpu), so building needs no libva headers and a system without libva simply decodes in software.
 [target.'cfg(target_os = "linux")'.dependencies]
-libloading = "0.8"
+libloading = {workspace = true}
 
 [dev-dependencies]
 filmcraft-testkit = { workspace = true }

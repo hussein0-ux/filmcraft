@@ -23,4 +23,4 @@ filmcraft-testkit = { workspace = true }
 
 # Thread CPU clock for load-robust performance tests.
 [target.'cfg(unix)'.dev-dependencies]
-rustix = { version = "1", default-features = false, features = ["std", "time"] }
+rustix = {workspace = true, features = ["std", "time"]}
