@@ -75,18 +75,18 @@ craft-docpath = { version = "0.1.0", git = "https://github.com/storytold/craft-l
 # ui
 # Shared frontend components; keep this dependency above the engine boundary.
 craft-ui = { version = "0.1.0", git = "https://github.com/storytold/craft-libs", rev = "5c874d51eeb3de70e735c8ce87a59a7dedd47675", features = ["serde"] }
-egui = "0.36"
-eframe = { version = "0.36", default-features = false }
-egui_kittest = "0.36"
+egui = "0.37"
+eframe = { version = "0.37", default-features = false }
+egui_kittest = "0.37"
 rfd = "0.17"
 subtle = "2.6"
-cpal = "0.16"
+cpal = "0.18"
 arboard = "3"
 chrono = {version = "0.4", default-features = false}
 sys-locale = "0.3"
 open = "5"
 glob = "0.3"
-pollster = "0.4"
+pollster = "1.0"
 muda = "0.21"
 objc2-foundation = {version = "0.3", default-features = false}
 objc2-app-kit = {version = "0.3", default-features = false}
@@ -106,8 +106,8 @@ image = {version = "0.25", default-features = false}
 toml = "1"
 rustix = {version = "1", default-features = false}
 cpu-time = "1"
-skrifa = {version = "0.44", default-features = false}
-harfrust = {version = "0.12", default-features = false}
+skrifa = {version = "0.47", default-features = false}
+harfrust = {version = "0.13", default-features = false}
 unicode-linebreak = "0.1.5"
 unicode-segmentation = "1.13"
 objc2-core-foundation = "0.3.2"
@@ -115,20 +115,20 @@ objc2-core-media = "0.3.2"
 objc2-core-video = "0.3.2"
 objc2-video-toolbox = "0.3.2"
 windows = "0.62"
-libloading = "0.8"
+libloading = "0.9"
 rmcp = {version = "3.5", default-features = false}
-base64 = "0.22"
+base64 = "0.23"
 schemars = "1"
 tempfile = "3.27"
-candle-core = {version = "0.9", default-features = false}
-candle-nn = {version = "0.9", default-features = false}
-zip = {version = "7", default-features = false}
+candle-core = {version = "0.11", default-features = false}
+candle-nn = {version = "0.11", default-features = false}
+zip = {version = "8", default-features = false}
 png = "0.18"
-symphonia = {version = "0.5.5", default-features = false}
+symphonia = {version = "0.6.1", default-features = false}
 ureq = {version = "3", default-features = false}
 rustls = {version = "0.23", default-features = false}
 rustls-rustcrypto = "0.0.2-alpha"
-sha2 = "0.10"
+sha2 = "0.11"
 
 [workspace.lints.rust]
 unsafe_code = "forbid"
